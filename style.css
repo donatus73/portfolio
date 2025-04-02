@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #211e1e;
+    color: rgb(33, 31, 31);
+    
+}
+
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 250px;
+    border-radius: 20%;
+    margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+.profile-pic:hover {
+    transform: scale(1.5);  /* Adjust scale factor as needed */
+}
+
+.header-text {
+    
+    text-align: center;
+}
+/* Adjust margins specifically in the header text */
+.header-text h2 {
+    margin-bottom: 5px; /* reduce spacing below the name */
+}
+
+.header-text .job-title {
+    margin-top: 5px;  /* reduce spacing above the job title */
+}
+
+nav {
+    background: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+.languages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.language-card {
+    background: #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+}
+
+.language-card:hover {
+    transform: scale(1.1);
+    background: #57e2af;
+}
+
+.language-icon {
+    font-size: 2.5em;  /* Adjust icon size as needed */
+    margin-bottom: 10px;
+}
+
+.language-name {
+    text-align: center;
+    font-size: 1em;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+h2{
+    color: orange;
+}
+p{
+    font-size: 18px;
+}
+section:hover {
+    transform: scale(1.02);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+.job-title{
+font-size: 38px;
+}
+form button {
+    background: #57e2af;
+    color: rgb(242, 238, 238);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+form button:hover {
+    background: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #4cc79c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+
+.moving-text, .profile-pic {
+    font-size: 5em;
+    font-weight: bold;
+    position: relative;
+    background: url('MY\ PIX.jpg') repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moveBg 5s linear infinite;
+    margin-bottom: 5px;
+}
+
+@keyframes moveBg {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 0 -25;
+    }
+    50% {
+        background-position: 0 -50;
+    }
+    75% {
+        background-position: 0 -75;
+    }
+    100% {
+        background-position: 0 -200%;
+    }
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer .footer-content p {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .social-links a:hover {
+    color: orange;
+}
+
