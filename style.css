@@ -4,9 +4,7 @@ body {
     padding: 0;
     background-color: #211e1e;
     color: rgb(33, 31, 31);
-    
 }
-
 
 header {
     background: #333;
@@ -30,14 +28,15 @@ header {
     margin-right: 15px;
     transition: transform 0.3s ease-in-out;
 }
+
 .profile-pic:hover {
     transform: scale(1.5);  /* Adjust scale factor as needed */
 }
 
 .header-text {
-    
     text-align: center;
 }
+
 /* Adjust margins specifically in the header text */
 .header-text h2 {
     margin-bottom: 5px; /* reduce spacing below the name */
@@ -121,12 +120,14 @@ section {
     transition: transform 0.3s ease-in-out;
 }
 
-h2{
+h2 {
     color: orange;
 }
-p{
+
+p {
     font-size: 18px;
 }
+
 section:hover {
     transform: scale(1.02);
 }
@@ -141,9 +142,11 @@ form input, form textarea, form button {
     padding: 10px;
     font-size: 16px;
 }
-.job-title{
-font-size: 38px;
+
+.job-title {
+    font-size: 38px;
 }
+
 form button {
     background: #57e2af;
     color: rgb(242, 238, 238);
@@ -170,9 +173,9 @@ form button:hover {
     background: #555;
 }
 
-
-.moving-text, .profile-pic {
-    font-size: 5em;
+/* Responsive font size for name */
+.moving-text {
+    font-size: 5em;  /* Default size for large screens */
     font-weight: bold;
     position: relative;
     background: url('MY\ PIX.jpg') repeat;
@@ -183,6 +186,35 @@ form button:hover {
     margin-bottom: 5px;
 }
 
+/* Mobile responsive styles (480px and below) */
+@media only screen and (max-width: 480px) {
+    .moving-text {
+        font-size: 0.5em;  /* Smaller font size for mobile devices */
+    }
+}
+
+/* Tablet responsive styles (768px and below) */
+@media only screen and (max-width: 768px) {
+    .moving-text {
+        font-size: 1.0em;  /* Slightly smaller font size for tablets */
+    }
+}
+
+/* Medium screen responsive styles (992px and below) */
+@media only screen and (max-width: 992px) {
+    .moving-text {
+        font-size: 2.0em;  /* Medium font size for medium screens */
+    }
+}
+
+/* Large screen responsive styles (1200px and below) */
+@media only screen and (max-width: 1200px) {
+    .moving-text {
+        font-size: 4.5em;  /* Font size for large screens */
+    }
+}
+
+/* Animation for moving background */
 @keyframes moveBg {
     0% {
         background-position: 0 0;
@@ -224,4 +256,3 @@ footer .social-links a {
 footer .social-links a:hover {
     color: orange;
 }
-
