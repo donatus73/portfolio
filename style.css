@@ -86,6 +86,10 @@ header {
     font-size: 1em;
 }
 
+.nav-links a:hover {
+    color: orange;   
+}
+
 /* Hamburger Menu (Hidden by Default) */
 .hamburger {
     display: none;
