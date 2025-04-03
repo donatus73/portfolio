@@ -1,9 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #211e1e;
-    color: rgb(33, 31, 31);
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
 }
 
 header {
@@ -20,8 +26,8 @@ header {
 .profile-container {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;  /* Ensures responsive layout */
     justify-content: center;
+    flex-direction: column;
 }
 
 .profile-pic {
@@ -30,56 +36,218 @@ header {
     border-radius: 20%;
     margin-right: 15px;
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 10px;  /* To provide space when stacked on small screens */
 }
 
 .profile-pic:hover {
-    transform: scale(1.5);  /* Adjust scale factor as needed */
+    transform: scale(1.5); /* Adjust scale factor as needed */
 }
 
 .header-text {
     text-align: center;
-    margin: 0;  /* Avoid margins affecting layout on small screens */
 }
 
 .header-text h2 {
-    margin-bottom: 5px; /* Reduce spacing below the name */
+    margin-bottom: 5px;
 }
 
 .header-text .job-title {
-    margin-top: 5px;  /* Reduce spacing above the job title */
+    margin-top: 5px;
 }
 
-/* Sticky Navigation */
-nav {
-    background: #444;
-    padding: 10px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;  /* Ensure nav stays on top */
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px 20px;
+    color: white;
 }
 
-nav ul {
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-nav ul li {
-    display: inline-block;
+.nav-links li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.nav-links a {
     color: white;
     text-decoration: none;
+    font-size: 1em;
+}
+
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+}
+
+/* Responsive Design - Show Hamburger on Small Screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Make hamburger visible */
+    }
+    
+    .nav-links {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        background: #444;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+}
+
+/* Rest of your styles for profile, sections, etc. */
+.languages-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.language-card {
+    background: #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+}
+
+.language-card:hover {
+    transform: scale(1.1);
+    background: #57e2af;
+}
+
+.language-icon {
+    font-size: 2.5em;  /* Adjust icon size as needed */
+    margin-bottom: 10px;
+}
+
+.language-name {
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Additional section styles for the About, Skills, etc. */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+h2 {
+    color: orange;
+}
+
+p {
+    font-size: 18px;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer .footer-content p {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
     transition: color 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
+footer .social-links a:hover {
     color: orange;
 }
+
+
+header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 250px;
+    border-radius: 20%;
+    margin-right: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.5); /* Adjust scale factor as needed */
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-text h2 {
+    margin-bottom: 5px;
+}
+
+.header-text .job-title {
+    margin-top: 5px;
+}
+
 
 .languages-container {
     display: flex;
@@ -111,7 +279,7 @@ nav ul li a:hover {
 }
 
 .language-icon {
-    font-size: 2.5em;
+    font-size: 2.5em;  /* Adjust icon size as needed */
     margin-bottom: 10px;
 }
 
@@ -125,8 +293,10 @@ section {
     margin: 20px;
     background: white;
     border-radius: 5px;
+    text-align: justify;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+
 }
 
 h2 {
@@ -182,12 +352,11 @@ form button:hover {
     background: #555;
 }
 
-/* Responsive font size for name */
-.moving-text {
-    font-size: 5em;  /* Default size for large screens */
+.moving-text, .profile-pic {
+    font-size: 5em;
     font-weight: bold;
     position: relative;
-    background: url('MY\ PIX.jpg') repeat;
+    background: url('MY PIX.jpg') repeat;
     background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -195,113 +364,6 @@ form button:hover {
     margin-bottom: 5px;
 }
 
-/* Mobile responsive styles (480px and below) */
-@media only screen and (max-width: 480px) {
-    .moving-text {
-        font-size: 2.5em;  /* Smaller font size for mobile devices */
-    }
-
-    .profile-container {
-        flex-direction: column;  /* Stack profile pic and text on mobile */
-        text-align: center;
-    }
-
-    .profile-pic {
-        width: 150px;
-        height: 200px;
-        margin-bottom: 20px;  /* Adjust space for small screens */
-    }
-
-    .header-text h2 {
-        font-size: 2em;  /* Smaller name font on mobile */
-    }
-
-    .header-text .job-title {
-        font-size: 1.2em;
-    }
-}
-
-/* Tablet responsive styles (768px and below) */
-@media only screen and (max-width: 768px) {
-    .moving-text {
-        font-size: 3.5em;  /* Slightly smaller font size for tablets */
-    }
-
-    .profile-container {
-        flex-direction: column;  /* Stack profile pic and text */
-        text-align: center;
-    }
-
-    .profile-pic {
-        width: 180px;
-        height: 230px;
-        margin-bottom: 15px;
-    }
-
-    .header-text h2 {
-        font-size: 3em;  /* Adjust font size */
-    }
-
-    .header-text .job-title {
-        font-size: 1.5em;
-    }
-}
-
-/* Medium screen responsive styles (992px and below) */
-@media only screen and (max-width: 992px) {
-    .moving-text {
-        font-size: 4.5em;  /* Medium font size for medium screens */
-    }
-
-    .profile-container {
-        flex-direction: row;  /* Align profile pic and text horizontally */
-        justify-content: center;
-        text-align: left;  /* Align text to the left for medium screens */
-    }
-
-    .profile-pic {
-        width: 200px;
-        height: 250px;
-        margin-right: 20px;
-    }
-
-    .header-text h2 {
-        font-size: 3.5em;
-    }
-
-    .header-text .job-title {
-        font-size: 1.8em;
-    }
-}
-
-/* Large screen responsive styles (1200px and below) */
-@media only screen and (max-width: 1200px) {
-    .moving-text {
-        font-size: 4.5em;  /* Font size for large screens */
-    }
-
-    .profile-container {
-        flex-direction: row;  /* Keep the profile pic and text aligned horizontally */
-        justify-content: center;
-        text-align: left;
-    }
-
-    .profile-pic {
-        width: 220px;
-        height: 270px;
-        margin-right: 30px;
-    }
-
-    .header-text h2 {
-        font-size: 4em;
-    }
-
-    .header-text .job-title {
-        font-size: 2em;
-    }
-}
-
-/* Animation for moving background */
 @keyframes moveBg {
     0% {
         background-position: 0 0;
@@ -343,3 +405,77 @@ footer .social-links a {
 footer .social-links a:hover {
     color: orange;
 }
+
+/* Media Queries */
+
+/* Large Screens (1200px and up) */
+@media screen and (max-width: 1200px) {
+    .profile-pic {
+        width: 150px;
+        height: 200px;
+    }
+
+    .profile-container {
+        flex-direction: row;
+    }
+
+    .header-text h2 {
+        font-size: 2.5em;
+    }
+
+    
+}
+
+/* Medium Screens (992px and up) */
+@media screen and (max-width: 992px) {
+    .profile-pic {
+        width: 150px;
+        height: 200px;
+    }
+
+    .header-text h2 {
+        font-size: 2.2em;
+    }
+
+    .header-text .job-title {
+        font-size: 28px;
+    }
+}
+
+/* Tablets (768px and up) */
+@media screen and (max-width: 768px) {
+    .profile-pic {
+        width: 120px;
+        height: 150px;
+    }
+
+    .header-text h2 {
+        font-size: 2em;
+    }
+
+    .header-text .job-title {
+        font-size: 24px;
+    }
+
+}
+
+/* Mobile Phones (480px and up) */
+@media screen and (max-width: 480px) {
+    .profile-pic {
+        width: 100px;
+        height: 130px;
+    }
+
+    .header-text h2 {
+        font-size: 1.8em;
+    }
+
+    .header-text .job-title {
+        font-size: 22px;
+    }
+
+    .moving-text {
+        font-size: 4em;
+    }
+}
+
