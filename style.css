@@ -58,7 +58,7 @@ header {
 /* Navbar Styles */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background: #333;
     padding: 10px 20px;
@@ -84,10 +84,12 @@ header {
     color: white;
     text-decoration: none;
     font-size: 1em;
+    font-weight: bold;
 }
 
 .nav-links a:hover {
-    color: orange;   
+    color: orange;
+    
 }
 
 /* Hamburger Menu (Hidden by Default) */
@@ -339,12 +341,14 @@ form button {
 }
 
 form button:hover {
-    background: #555;
+    background: orange;
 }
 
 .btn {
     display: inline-block;
     padding: 10px 15px;
+    width: 100%;
+    text-align: center;
     background: #4cc79c;
     color: white;
     text-decoration: none;
@@ -353,7 +357,7 @@ form button:hover {
 }
 
 .btn:hover {
-    background: #555;
+    background: orange;
 }
 
 .moving-text, .profile-pic {
