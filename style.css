@@ -100,6 +100,9 @@ header {
     border: none;
     font-size: 1.5em;
     color: white;
+    position: absolute;
+    margin-left: 90%;
+    margin-bottom: 10px;
 }
 
 /* Responsive Design - Show Hamburger on Small Screens */
