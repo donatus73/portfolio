@@ -374,7 +374,7 @@ form button:hover {
     font-size: 5em;
     font-weight: bold;
     position: relative;
-    background: url('img/MY PIX.jpg') repeat;
+    background: url('../img/MY\ PIX.jpg') repeat;
     background-size: cover;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
