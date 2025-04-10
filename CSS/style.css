@@ -39,7 +39,7 @@ header {
 }
 
 .profile-pic:hover {
-    transform: scale(1.5); /* Adjust scale factor as needed */
+    transform: scale(1.5);
 }
 
 .header-text {
@@ -135,7 +135,7 @@ header {
     }
 }
 
-/* Rest of your styles for profile, sections, etc. */
+/* Rest of the styles for profile, sections, etc. */
 .languages-container {
     display: flex;
     flex-wrap: wrap;
@@ -249,7 +249,7 @@ header {
 }
 
 .profile-pic:hover {
-    transform: scale(1.5); /* Adjust scale factor as needed */
+    transform: scale(1.5);
 }
 
 .header-text {
@@ -295,7 +295,7 @@ header {
 }
 
 .language-icon {
-    font-size: 2.5em;  /* Adjust icon size as needed */
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
